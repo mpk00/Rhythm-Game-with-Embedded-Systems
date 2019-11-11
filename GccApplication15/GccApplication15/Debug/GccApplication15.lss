@@ -1,0 +1,721 @@
+
+GccApplication15.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000004  00800100  000003c2  00000456  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003c2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000008  00800104  00800104  0000045a  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000045a  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000048c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000078  00000000  00000000  000004cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000c0b  00000000  00000000  00000544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000951  00000000  00000000  0000114f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000595  00000000  00000000  00001aa0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000124  00000000  00000000  00002038  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004e2  00000000  00000000  0000215c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000042b  00000000  00000000  0000263e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000068  00000000  00000000  00002a69  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	6d c0       	rjmp	.+218    	; 0x110 <__vector_13>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e4       	ldi	r29, 0x40	; 64
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e2 ec       	ldi	r30, 0xC2	; 194
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a4 30       	cpi	r26, 0x04	; 4
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	a4 e0       	ldi	r26, 0x04	; 4
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	ac 30       	cpi	r26, 0x0C	; 12
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	71 d1       	rcall	.+738    	; 0x3a6 <main>
+  c4:	7c c1       	rjmp	.+760    	; 0x3be <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <TimerOn>:
+}
+
+unsigned char getBit(unsigned char number, unsigned char position)
+{
+	return (number >> position) & 0x01;
+}
+  c8:	8b e0       	ldi	r24, 0x0B	; 11
+  ca:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+  ce:	8d e7       	ldi	r24, 0x7D	; 125
+  d0:	90 e0       	ldi	r25, 0x00	; 0
+  d2:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+  d6:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+  da:	82 e0       	ldi	r24, 0x02	; 2
+  dc:	80 93 6f 00 	sts	0x006F, r24	; 0x80006f <__TEXT_REGION_LENGTH__+0x7e006f>
+  e0:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+  e4:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+  e8:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+  ec:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+  f0:	a0 91 02 01 	lds	r26, 0x0102	; 0x800102 <__data_start+0x2>
+  f4:	b0 91 03 01 	lds	r27, 0x0103	; 0x800103 <__data_start+0x3>
+  f8:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <_avr_timer_cntcurr>
+  fc:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <_avr_timer_cntcurr+0x1>
+ 100:	a0 93 08 01 	sts	0x0108, r26	; 0x800108 <_avr_timer_cntcurr+0x2>
+ 104:	b0 93 09 01 	sts	0x0109, r27	; 0x800109 <_avr_timer_cntcurr+0x3>
+ 108:	8f b7       	in	r24, 0x3f	; 63
+ 10a:	80 68       	ori	r24, 0x80	; 128
+ 10c:	8f bf       	out	0x3f, r24	; 63
+ 10e:	08 95       	ret
+
+00000110 <__vector_13>:
+ 110:	1f 92       	push	r1
+ 112:	0f 92       	push	r0
+ 114:	0f b6       	in	r0, 0x3f	; 63
+ 116:	0f 92       	push	r0
+ 118:	11 24       	eor	r1, r1
+ 11a:	8f 93       	push	r24
+ 11c:	9f 93       	push	r25
+ 11e:	af 93       	push	r26
+ 120:	bf 93       	push	r27
+ 122:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <_avr_timer_cntcurr>
+ 126:	90 91 07 01 	lds	r25, 0x0107	; 0x800107 <_avr_timer_cntcurr+0x1>
+ 12a:	a0 91 08 01 	lds	r26, 0x0108	; 0x800108 <_avr_timer_cntcurr+0x2>
+ 12e:	b0 91 09 01 	lds	r27, 0x0109	; 0x800109 <_avr_timer_cntcurr+0x3>
+ 132:	01 97       	sbiw	r24, 0x01	; 1
+ 134:	a1 09       	sbc	r26, r1
+ 136:	b1 09       	sbc	r27, r1
+ 138:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <_avr_timer_cntcurr>
+ 13c:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <_avr_timer_cntcurr+0x1>
+ 140:	a0 93 08 01 	sts	0x0108, r26	; 0x800108 <_avr_timer_cntcurr+0x2>
+ 144:	b0 93 09 01 	sts	0x0109, r27	; 0x800109 <_avr_timer_cntcurr+0x3>
+ 148:	89 2b       	or	r24, r25
+ 14a:	8a 2b       	or	r24, r26
+ 14c:	8b 2b       	or	r24, r27
+ 14e:	99 f4       	brne	.+38     	; 0x176 <__vector_13+0x66>
+ 150:	81 e0       	ldi	r24, 0x01	; 1
+ 152:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <TimerFlag>
+ 156:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 15a:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_start+0x1>
+ 15e:	a0 91 02 01 	lds	r26, 0x0102	; 0x800102 <__data_start+0x2>
+ 162:	b0 91 03 01 	lds	r27, 0x0103	; 0x800103 <__data_start+0x3>
+ 166:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <_avr_timer_cntcurr>
+ 16a:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <_avr_timer_cntcurr+0x1>
+ 16e:	a0 93 08 01 	sts	0x0108, r26	; 0x800108 <_avr_timer_cntcurr+0x2>
+ 172:	b0 93 09 01 	sts	0x0109, r27	; 0x800109 <_avr_timer_cntcurr+0x3>
+ 176:	bf 91       	pop	r27
+ 178:	af 91       	pop	r26
+ 17a:	9f 91       	pop	r25
+ 17c:	8f 91       	pop	r24
+ 17e:	0f 90       	pop	r0
+ 180:	0f be       	out	0x3f, r0	; 63
+ 182:	0f 90       	pop	r0
+ 184:	1f 90       	pop	r1
+ 186:	18 95       	reti
+
+00000188 <TimerSet>:
+ 188:	60 93 00 01 	sts	0x0100, r22	; 0x800100 <__data_start>
+ 18c:	70 93 01 01 	sts	0x0101, r23	; 0x800101 <__data_start+0x1>
+ 190:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <__data_start+0x2>
+ 194:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <__data_start+0x3>
+ 198:	60 93 06 01 	sts	0x0106, r22	; 0x800106 <_avr_timer_cntcurr>
+ 19c:	70 93 07 01 	sts	0x0107, r23	; 0x800107 <_avr_timer_cntcurr+0x1>
+ 1a0:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <_avr_timer_cntcurr+0x2>
+ 1a4:	90 93 09 01 	sts	0x0109, r25	; 0x800109 <_avr_timer_cntcurr+0x3>
+ 1a8:	08 95       	ret
+
+000001aa <shift>:
+
+void shift(unsigned char number)
+{
+	// toggle srclock after pushing each bit of the number
+	for(int i = 7; i >= 0; i--)
+ 1aa:	47 e0       	ldi	r20, 0x07	; 7
+ 1ac:	50 e0       	ldi	r21, 0x00	; 0
+	//for(int i = 0; i < 8; i++)		<--- this is for reverse order of pushing bits
+	{
+		PORTC = setBit(PORTC, 0, getBit(number, i));
+ 1ae:	a8 2f       	mov	r26, r24
+ 1b0:	b0 e0       	ldi	r27, 0x00	; 0
+ 1b2:	e8 b1       	in	r30, 0x08	; 8
+#include <avr/io.h>
+#include "clock.h"
+
+//=======================   FOR SHIFT REGISTER   =================================
+unsigned char setBit(unsigned char number, unsigned char position, unsigned short val)
+{ 	if(val == 1) {unsigned char num = 0x01 << position; return number | num;}
+ 1b4:	9d 01       	movw	r18, r26
+ 1b6:	04 2e       	mov	r0, r20
+ 1b8:	02 c0       	rjmp	.+4      	; 0x1be <shift+0x14>
+ 1ba:	35 95       	asr	r19
+ 1bc:	27 95       	ror	r18
+ 1be:	0a 94       	dec	r0
+ 1c0:	e2 f7       	brpl	.-8      	; 0x1ba <shift+0x10>
+ 1c2:	62 2f       	mov	r22, r18
+ 1c4:	61 70       	andi	r22, 0x01	; 1
+ 1c6:	70 e0       	ldi	r23, 0x00	; 0
+ 1c8:	20 ff       	sbrs	r18, 0
+ 1ca:	03 c0       	rjmp	.+6      	; 0x1d2 <shift+0x28>
+ 1cc:	9e 2f       	mov	r25, r30
+ 1ce:	91 60       	ori	r25, 0x01	; 1
+ 1d0:	04 c0       	rjmp	.+8      	; 0x1da <shift+0x30>
+if(val == 0) {unsigned char num = 0x01 << position; return number & ~num;}
+ 1d2:	67 2b       	or	r22, r23
+ 1d4:	11 f4       	brne	.+4      	; 0x1da <shift+0x30>
+ 1d6:	9e 2f       	mov	r25, r30
+ 1d8:	9e 7f       	andi	r25, 0xFE	; 254
+{
+	// toggle srclock after pushing each bit of the number
+	for(int i = 7; i >= 0; i--)
+	//for(int i = 0; i < 8; i++)		<--- this is for reverse order of pushing bits
+	{
+		PORTC = setBit(PORTC, 0, getBit(number, i));
+ 1da:	98 b9       	out	0x08, r25	; 8
+		PORTC = setBit(PORTC, 2, 0);
+ 1dc:	42 98       	cbi	0x08, 2	; 8
+		PORTC = setBit(PORTC, 2, 1);
+ 1de:	42 9a       	sbi	0x08, 2	; 8
+}
+
+void shift(unsigned char number)
+{
+	// toggle srclock after pushing each bit of the number
+	for(int i = 7; i >= 0; i--)
+ 1e0:	41 50       	subi	r20, 0x01	; 1
+ 1e2:	51 09       	sbc	r21, r1
+ 1e4:	30 f7       	brcc	.-52     	; 0x1b2 <shift+0x8>
+		PORTC = setBit(PORTC, 2, 0);
+		PORTC = setBit(PORTC, 2, 1);
+	}
+	
+	// set rclock from 0 to 1 to output results to shift register
+	PORTC = setBit(PORTC, 1, 0);
+ 1e6:	41 98       	cbi	0x08, 1	; 8
+	PORTC = setBit(PORTC, 1, 1);
+ 1e8:	41 9a       	sbi	0x08, 1	; 8
+ 1ea:	08 95       	ret
+
+000001ec <ADC_init>:
+}
+// ==============================================================================================================
+//		ADC FOR JOYSTICK
+
+void ADC_init() {
+	ADCSRA |= (1 << ADEN) | (1 << ADSC) | (1 << ADATE);
+ 1ec:	ea e7       	ldi	r30, 0x7A	; 122
+ 1ee:	f0 e0       	ldi	r31, 0x00	; 0
+ 1f0:	80 81       	ld	r24, Z
+ 1f2:	80 6e       	ori	r24, 0xE0	; 224
+ 1f4:	80 83       	st	Z, r24
+ 1f6:	08 95       	ret
+
+000001f8 <Set_a2d_Pin>:
+
+}
+
+void Set_a2d_Pin(unsigned char pinNum)
+{
+	ADMUX = (pinNum <= 0x07) ? pinNum : ADMUX;
+ 1f8:	88 30       	cpi	r24, 0x08	; 8
+ 1fa:	60 f0       	brcs	.+24     	; 0x214 <Set_a2d_Pin+0x1c>
+ 1fc:	ec e7       	ldi	r30, 0x7C	; 124
+ 1fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 200:	80 81       	ld	r24, Z
+ 202:	80 83       	st	Z, r24
+	ADCSRA |= (1 << ADEN) | (1 << ADSC) | (1 << ADATE);
+
+}
+
+void Set_a2d_Pin(unsigned char pinNum)
+{
+ 204:	8f e0       	ldi	r24, 0x0F	; 15
+	ADMUX = (pinNum <= 0x07) ? pinNum : ADMUX;
+	static unsigned char i = 0;
+	for(i = 0; i < 15; i++)
+	{
+		asm("nop");
+ 206:	00 00       	nop
+ 208:	81 50       	subi	r24, 0x01	; 1
+
+void Set_a2d_Pin(unsigned char pinNum)
+{
+	ADMUX = (pinNum <= 0x07) ? pinNum : ADMUX;
+	static unsigned char i = 0;
+	for(i = 0; i < 15; i++)
+ 20a:	e9 f7       	brne	.-6      	; 0x206 <Set_a2d_Pin+0xe>
+ 20c:	8f e0       	ldi	r24, 0x0F	; 15
+ 20e:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
+	{
+		asm("nop");
+	}
+}
+ 212:	08 95       	ret
+
+}
+
+void Set_a2d_Pin(unsigned char pinNum)
+{
+	ADMUX = (pinNum <= 0x07) ? pinNum : ADMUX;
+ 214:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <__TEXT_REGION_LENGTH__+0x7e007c>
+ 218:	f5 cf       	rjmp	.-22     	; 0x204 <Set_a2d_Pin+0xc>
+
+0000021a <tick>:
+//================================================================================
+//   STATE MACHINE 1
+
+enum state {start, init, gameplay, scoreDisplay} state;
+unsigned char score = 0;
+void tick(){
+ 21a:	bf 92       	push	r11
+ 21c:	cf 92       	push	r12
+ 21e:	df 92       	push	r13
+ 220:	ef 92       	push	r14
+ 222:	ff 92       	push	r15
+ 224:	0f 93       	push	r16
+ 226:	1f 93       	push	r17
+ 228:	cf 93       	push	r28
+ 22a:	df 93       	push	r29
+	unsigned short joystick = ADC;
+ 22c:	20 91 78 00 	lds	r18, 0x0078	; 0x800078 <__TEXT_REGION_LENGTH__+0x7e0078>
+ 230:	30 91 79 00 	lds	r19, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x7e0079>
+	unsigned char posX, posY;
+	unsigned char terminate = 0x00;
+	
+	switch(state){//transitions
+ 234:	80 91 0b 01 	lds	r24, 0x010B	; 0x80010b <state>
+ 238:	81 30       	cpi	r24, 0x01	; 1
+ 23a:	51 f0       	breq	.+20     	; 0x250 <tick+0x36>
+ 23c:	28 f0       	brcs	.+10     	; 0x248 <tick+0x2e>
+ 23e:	82 30       	cpi	r24, 0x02	; 2
+ 240:	81 f0       	breq	.+32     	; 0x262 <tick+0x48>
+ 242:	83 30       	cpi	r24, 0x03	; 3
+ 244:	99 f0       	breq	.+38     	; 0x26c <tick+0x52>
+ 246:	1c c0       	rjmp	.+56     	; 0x280 <tick+0x66>
+		case start:
+			state = init;
+ 248:	81 e0       	ldi	r24, 0x01	; 1
+ 24a:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <state>
+			break;
+ 24e:	20 c0       	rjmp	.+64     	; 0x290 <tick+0x76>
+		case init:
+			if(joystick > 700 || joystick < 300) {state = gameplay;}
+ 250:	2c 52       	subi	r18, 0x2C	; 44
+ 252:	31 40       	sbci	r19, 0x01	; 1
+ 254:	21 39       	cpi	r18, 0x91	; 145
+ 256:	31 40       	sbci	r19, 0x01	; 1
+ 258:	d8 f0       	brcs	.+54     	; 0x290 <tick+0x76>
+ 25a:	82 e0       	ldi	r24, 0x02	; 2
+ 25c:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <state>
+ 260:	1e c0       	rjmp	.+60     	; 0x29e <tick+0x84>
+			else {state = init;}
+			break;
+		case gameplay:
+			if(~PINA & 0x10) {state = init;}
+ 262:	04 99       	sbic	0x00, 4	; 0
+ 264:	03 c0       	rjmp	.+6      	; 0x26c <tick+0x52>
+ 266:	81 e0       	ldi	r24, 0x01	; 1
+ 268:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <state>
+			else if(posX == 128 && posY == 0x1F && joystick > 300) {state = scoreDisplay;}
+			else {state = gameplay;}
+		case scoreDisplay:
+			if(~PINA & 0x10) {state = init;}
+ 26c:	04 99       	sbic	0x00, 4	; 0
+ 26e:	04 c0       	rjmp	.+8      	; 0x278 <tick+0x5e>
+ 270:	81 e0       	ldi	r24, 0x01	; 1
+ 272:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <state>
+ 276:	0c c0       	rjmp	.+24     	; 0x290 <tick+0x76>
+			else {state = scoreDisplay;}
+ 278:	83 e0       	ldi	r24, 0x03	; 3
+ 27a:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <state>
+ 27e:	74 c0       	rjmp	.+232    	; 0x368 <tick+0x14e>
+
+	}
+	
+	switch(state){//actions
+ 280:	82 30       	cpi	r24, 0x02	; 2
+ 282:	69 f0       	breq	.+26     	; 0x29e <tick+0x84>
+ 284:	83 30       	cpi	r24, 0x03	; 3
+ 286:	09 f4       	brne	.+2      	; 0x28a <tick+0x70>
+ 288:	6f c0       	rjmp	.+222    	; 0x368 <tick+0x14e>
+ 28a:	81 30       	cpi	r24, 0x01	; 1
+ 28c:	09 f0       	breq	.+2      	; 0x290 <tick+0x76>
+ 28e:	81 c0       	rjmp	.+258    	; 0x392 <tick+0x178>
+		case init:
+			PORTD = 0xE7;
+ 290:	87 ee       	ldi	r24, 0xE7	; 231
+ 292:	8b b9       	out	0x0b, r24	; 11
+			shift(0x18);
+ 294:	88 e1       	ldi	r24, 0x18	; 24
+ 296:	89 df       	rcall	.-238    	; 0x1aa <shift>
+			score = 0;
+ 298:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <score>
+			break;
+ 29c:	7a c0       	rjmp	.+244    	; 0x392 <tick+0x178>
+		case gameplay:
+			posX = 0x01;
+			posY = 0x1F;
+			
+			TimerSet(100);
+ 29e:	64 e6       	ldi	r22, 0x64	; 100
+ 2a0:	70 e0       	ldi	r23, 0x00	; 0
+ 2a2:	80 e0       	ldi	r24, 0x00	; 0
+ 2a4:	90 e0       	ldi	r25, 0x00	; 0
+			TimerOn();
+ 2a6:	70 df       	rcall	.-288    	; 0x188 <TimerSet>
+ 2a8:	0f df       	rcall	.-482    	; 0xc8 <TimerOn>
+			shift(0x18);
+			score = 0;
+			break;
+		case gameplay:
+			posX = 0x01;
+			posY = 0x1F;
+ 2aa:	df e1       	ldi	r29, 0x1F	; 31
+			PORTD = 0xE7;
+			shift(0x18);
+			score = 0;
+			break;
+		case gameplay:
+			posX = 0x01;
+ 2ac:	c1 e0       	ldi	r28, 0x01	; 1
+			TimerSet(100);
+			TimerOn();
+
+			while(terminate == 0x00)
+			{
+				joystick = ADC;
+ 2ae:	0f 2e       	mov	r0, r31
+ 2b0:	f8 e7       	ldi	r31, 0x78	; 120
+ 2b2:	ef 2e       	mov	r14, r31
+ 2b4:	f1 2c       	mov	r15, r1
+ 2b6:	f0 2d       	mov	r31, r0
+ 2b8:	dd 24       	eor	r13, r13
+ 2ba:	d3 94       	inc	r13
+ 2bc:	0f 2e       	mov	r0, r31
+ 2be:	f8 ef       	ldi	r31, 0xF8	; 248
+ 2c0:	bf 2e       	mov	r11, r31
+ 2c2:	f0 2d       	mov	r31, r0
+ 2c4:	00 e0       	ldi	r16, 0x00	; 0
+				
+				// player loses handler
+				if(posX == 128)
+				{
+					// for either case, exit gameplay and into scoreDisplay
+					if(posY == 0x1F && joystick > 300) {terminate = 0x01;}
+ 2c6:	0f 2e       	mov	r0, r31
+ 2c8:	ff e1       	ldi	r31, 0x1F	; 31
+ 2ca:	cf 2e       	mov	r12, r31
+ 2cc:	f0 2d       	mov	r31, r0
+			TimerSet(100);
+			TimerOn();
+
+			while(terminate == 0x00)
+			{
+				joystick = ADC;
+ 2ce:	f7 01       	movw	r30, r14
+ 2d0:	80 81       	ld	r24, Z
+ 2d2:	91 81       	ldd	r25, Z+1	; 0x01
+				if(posX < 128) { posX = posX * 2; }
+ 2d4:	cc 23       	and	r28, r28
+ 2d6:	0c f0       	brlt	.+2      	; 0x2da <tick+0xc0>
+ 2d8:	cc 0f       	add	r28, r28
+				
+				
+				// when player scores lower goal
+				if(posX >= 64 && posY == 0x1F)
+ 2da:	c0 34       	cpi	r28, 0x40	; 64
+ 2dc:	f0 f0       	brcs	.+60     	; 0x31a <tick+0x100>
+ 2de:	df 31       	cpi	r29, 0x1F	; 31
+ 2e0:	09 f0       	breq	.+2      	; 0x2e4 <tick+0xca>
+ 2e2:	48 c0       	rjmp	.+144    	; 0x374 <tick+0x15a>
+				{
+					if(joystick < 300) {score++; posX = 0x01; posY = 0xF8;}
+ 2e4:	8c 32       	cpi	r24, 0x2C	; 44
+ 2e6:	f1 e0       	ldi	r31, 0x01	; 1
+ 2e8:	9f 07       	cpc	r25, r31
+ 2ea:	08 f0       	brcs	.+2      	; 0x2ee <tick+0xd4>
+ 2ec:	4a c0       	rjmp	.+148    	; 0x382 <tick+0x168>
+ 2ee:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <score>
+ 2f2:	8f 5f       	subi	r24, 0xFF	; 255
+ 2f4:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <score>
+ 2f8:	db 2d       	mov	r29, r11
+ 2fa:	c1 e0       	ldi	r28, 0x01	; 1
+ 2fc:	10 2f       	mov	r17, r16
+ 2fe:	27 c0       	rjmp	.+78     	; 0x34e <tick+0x134>
+				}
+			
+				// when player scores upper goal
+				if(posX >= 64 && posY == 0xF8)
+				{
+					if(joystick > 700) {score++; posX = 0x01; posY = 0x1F;}
+ 300:	8d 3b       	cpi	r24, 0xBD	; 189
+ 302:	22 e0       	ldi	r18, 0x02	; 2
+ 304:	92 07       	cpc	r25, r18
+ 306:	c8 f1       	brcs	.+114    	; 0x37a <tick+0x160>
+ 308:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <score>
+ 30c:	8f 5f       	subi	r24, 0xFF	; 255
+ 30e:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <score>
+ 312:	dc 2d       	mov	r29, r12
+ 314:	c1 e0       	ldi	r28, 0x01	; 1
+ 316:	10 2f       	mov	r17, r16
+ 318:	1a c0       	rjmp	.+52     	; 0x34e <tick+0x134>
+				}
+				
+				
+				// player loses handler
+				if(posX == 128)
+ 31a:	c0 38       	cpi	r28, 0x80	; 128
+ 31c:	a1 f4       	brne	.+40     	; 0x346 <tick+0x12c>
+				{
+					// for either case, exit gameplay and into scoreDisplay
+					if(posY == 0x1F && joystick > 300) {terminate = 0x01;}
+ 31e:	df 31       	cpi	r29, 0x1F	; 31
+ 320:	41 f4       	brne	.+16     	; 0x332 <tick+0x118>
+ 322:	1d 2d       	mov	r17, r13
+ 324:	8d 32       	cpi	r24, 0x2D	; 45
+ 326:	91 40       	sbci	r25, 0x01	; 1
+ 328:	08 f4       	brcc	.+2      	; 0x32c <tick+0x112>
+ 32a:	10 2f       	mov	r17, r16
+ 32c:	dc 2d       	mov	r29, r12
+ 32e:	c0 e8       	ldi	r28, 0x80	; 128
+ 330:	0e c0       	rjmp	.+28     	; 0x34e <tick+0x134>
+					if(posY == 0xF8 && joystick < 700) {terminate = 0x01;}
+ 332:	d8 3f       	cpi	r29, 0xF8	; 248
+ 334:	51 f4       	brne	.+20     	; 0x34a <tick+0x130>
+ 336:	1d 2d       	mov	r17, r13
+ 338:	8c 3b       	cpi	r24, 0xBC	; 188
+ 33a:	92 40       	sbci	r25, 0x02	; 2
+ 33c:	08 f0       	brcs	.+2      	; 0x340 <tick+0x126>
+ 33e:	10 2f       	mov	r17, r16
+ 340:	db 2d       	mov	r29, r11
+ 342:	c0 e8       	ldi	r28, 0x80	; 128
+ 344:	04 c0       	rjmp	.+8      	; 0x34e <tick+0x134>
+ 346:	10 2f       	mov	r17, r16
+ 348:	02 c0       	rjmp	.+4      	; 0x34e <tick+0x134>
+ 34a:	c0 e8       	ldi	r28, 0x80	; 128
+				} 
+				
+				//--------------------------------------
+				PORTD = posX;
+ 34c:	10 2f       	mov	r17, r16
+				shift(posY);
+ 34e:	cb b9       	out	0x0b, r28	; 11
+ 350:	8d 2f       	mov	r24, r29
+ 352:	2b df       	rcall	.-426    	; 0x1aa <shift>
+
+				while (!TimerFlag) {} // Wait for timer period
+ 354:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <TimerFlag>
+ 358:	88 23       	and	r24, r24
+ 35a:	e1 f3       	breq	.-8      	; 0x354 <tick+0x13a>
+				TimerFlag = 0;
+ 35c:	00 93 0a 01 	sts	0x010A, r16	; 0x80010a <TimerFlag>
+			posY = 0x1F;
+			
+			TimerSet(100);
+			TimerOn();
+
+			while(terminate == 0x00)
+ 360:	11 23       	and	r17, r17
+ 362:	09 f4       	brne	.+2      	; 0x366 <tick+0x14c>
+ 364:	b4 cf       	rjmp	.-152    	; 0x2ce <tick+0xb4>
+ 366:	15 c0       	rjmp	.+42     	; 0x392 <tick+0x178>
+			
+			
+			break;
+			
+		case scoreDisplay:			
+			PORTD = 0x01;
+ 368:	81 e0       	ldi	r24, 0x01	; 1
+			shift(score);
+ 36a:	8b b9       	out	0x0b, r24	; 11
+ 36c:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <score>
+ 370:	1c df       	rcall	.-456    	; 0x1aa <shift>
+			break;
+	}
+}
+ 372:	0f c0       	rjmp	.+30     	; 0x392 <tick+0x178>
+				{
+					if(joystick < 300) {score++; posX = 0x01; posY = 0xF8;}
+				}
+			
+				// when player scores upper goal
+				if(posX >= 64 && posY == 0xF8)
+ 374:	d8 3f       	cpi	r29, 0xF8	; 248
+ 376:	49 f4       	brne	.+18     	; 0x38a <tick+0x170>
+ 378:	c3 cf       	rjmp	.-122    	; 0x300 <tick+0xe6>
+					if(joystick > 700) {score++; posX = 0x01; posY = 0x1F;}
+				}
+				
+				
+				// player loses handler
+				if(posX == 128)
+ 37a:	c0 38       	cpi	r28, 0x80	; 128
+ 37c:	e1 f2       	breq	.-72     	; 0x336 <tick+0x11c>
+ 37e:	10 2f       	mov	r17, r16
+ 380:	e6 cf       	rjmp	.-52     	; 0x34e <tick+0x134>
+ 382:	c0 38       	cpi	r28, 0x80	; 128
+ 384:	71 f2       	breq	.-100    	; 0x322 <tick+0x108>
+ 386:	10 2f       	mov	r17, r16
+ 388:	e2 cf       	rjmp	.-60     	; 0x34e <tick+0x134>
+ 38a:	c0 38       	cpi	r28, 0x80	; 128
+ 38c:	91 f2       	breq	.-92     	; 0x332 <tick+0x118>
+ 38e:	10 2f       	mov	r17, r16
+ 390:	de cf       	rjmp	.-68     	; 0x34e <tick+0x134>
+		case scoreDisplay:			
+			PORTD = 0x01;
+			shift(score);
+			break;
+	}
+}
+ 392:	df 91       	pop	r29
+ 394:	cf 91       	pop	r28
+ 396:	1f 91       	pop	r17
+ 398:	0f 91       	pop	r16
+ 39a:	ff 90       	pop	r15
+ 39c:	ef 90       	pop	r14
+ 39e:	df 90       	pop	r13
+ 3a0:	cf 90       	pop	r12
+ 3a2:	bf 90       	pop	r11
+ 3a4:	08 95       	ret
+
+000003a6 <main>:
+
+
+int main(void)
+{
+	 DDRD = 0xFF; PORTD = 0x00;
+ 3a6:	8f ef       	ldi	r24, 0xFF	; 255
+ 3a8:	8a b9       	out	0x0a, r24	; 10
+ 3aa:	1b b8       	out	0x0b, r1	; 11
+	 DDRC = 0xFF; PORTC = 0x00;
+ 3ac:	87 b9       	out	0x07, r24	; 7
+ 3ae:	18 b8       	out	0x08, r1	; 8
+	 DDRA = 0x00; PORTA = 0xFF;
+ 3b0:	11 b8       	out	0x01, r1	; 1
+ 3b2:	82 b9       	out	0x02, r24	; 2
+    /* Replace with your application code */
+	
+
+	ADC_init();
+ 3b4:	1b df       	rcall	.-458    	; 0x1ec <ADC_init>
+	Set_a2d_Pin(0x01);
+ 3b6:	81 e0       	ldi	r24, 0x01	; 1
+	while(1)
+	{
+		tick();
+ 3b8:	1f df       	rcall	.-450    	; 0x1f8 <Set_a2d_Pin>
+ 3ba:	2f df       	rcall	.-418    	; 0x21a <tick>
+ 3bc:	fe cf       	rjmp	.-4      	; 0x3ba <main+0x14>
+
+000003be <_exit>:
+ 3be:	f8 94       	cli
+
+000003c0 <__stop_program>:
+ 3c0:	ff cf       	rjmp	.-2      	; 0x3c0 <__stop_program>
